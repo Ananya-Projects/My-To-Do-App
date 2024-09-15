@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Task Overview</h2>
+        <div class="stats-cards">
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p>{{ total_tasks }}</p>
+            </div>
+            <div class="card">
+                <h3>Completed Tasks</h3>
+                <p>{{ completed_tasks }}</p>
+            </div>
+            <div class="card">
+                <h3>Upcoming Tasks</h3>
+                <p>{{ upcoming_tasks }}</p>
+            </div>
+        </div>
+        
+        <!-- Optional: Include a chart for task trends -->
+        <canvas id="taskChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('taskChart').getContext('2d');
+        var taskChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May'],
+                datasets: [{
+                    label: 'Tasks Completed',
+                    data: [5, 10, 15, 20, 25], // Replace with dynamic data
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

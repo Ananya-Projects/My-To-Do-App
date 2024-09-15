@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About My To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h1>MyTo-do</h1>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/dashboard">Dashboard</a>
+            </div>
+        </nav>
+        
+        <main class="container about-page">
+            <section class="about">
+                <h1>About My To-Do App</h1>
+                <p>Welcome to My To-Do App, a simple yet powerful tool designed to help you manage your tasks efficiently. Our app allows you to add, edit, and delete tasks, set due dates, and filter tasks based on various criteria.</p>
+                <p>With an intuitive interface and customizable features, My To-Do App is here to help you stay organized and productive.</p>
+            </section>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>Add and manage tasks with ease.</li>
+                    <li>Set due dates and prioritize tasks.</li>
+                    <li>Filter tasks by status, due date, and priority.</li>
+                    <li>Mark tasks as done to keep track of completed items.</li>
+                    <li>Enjoy a user-friendly interface with responsive design.</li>
+                </ul>
+            </section>
+
+            <section class="developer">
+                <h2>About the Developer</h2>
+                <p>My To-Do App was developed by Ashish, Chirag & Arpit, a passionate developer who loves creating tools that make life easier. If you have any questions or feedback, feel free to reach out.</p>
+            </section>
+
+            <section class="contact">
+                <h2>Contact</h2>
+                <p>If you have any questions or need support, please reach out to us at:</p>
+                <p>Phone No. : +0 704 894 5944</p>
+            </section>
+
+            <section class="acknowledgements">
+                <h2>Acknowledgements</h2>
+                <p>Special thanks to the developers of Flask and SQLAlchemy for providing the frameworks that made this app possible. We also appreciate the open-source community for their contributions.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
